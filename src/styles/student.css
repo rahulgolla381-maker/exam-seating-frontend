@@ -1,0 +1,344 @@
+/* Student Portal Styling - Standard CSS */
+:root {
+  --student-primary: #0284c7;       /* Ocean Blue */
+  --student-primary-dark: #0369a1;
+  --student-accent: #0284c7;
+  --student-bg: #f8fafc;
+  --student-card-bg: #ffffff;
+  --student-border: #e2e8f0;
+  --student-text: #0f172a;
+  --student-muted: #64748b;
+  --student-badge-bg: #e0f2fe;
+  --student-badge-text: #0369a1;
+}
+
+/* Student Layout */
+.student-layout {
+  min-height: 100vh;
+  background-color: var(--student-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Student Header */
+.student-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--student-border);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.student-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.student-app-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--student-text);
+  letter-spacing: -0.01em;
+}
+
+.student-portal-tag {
+  font-size: 0.75rem;
+  color: var(--student-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.student-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.student-user-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+}
+
+.student-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background-color: var(--student-badge-bg);
+  color: var(--student-badge-text);
+  letter-spacing: 0.04em;
+}
+
+/* Student Main Container */
+.student-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 32px auto;
+  padding: 0 20px;
+  flex: 1;
+}
+
+/* Welcome Card */
+.welcome-card {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.welcome-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.welcome-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.welcome-meta {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+/* Exam Selector */
+.exam-select-bar {
+  background: #ffffff;
+  border: 1px solid var(--student-border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.exam-select-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--student-text);
+}
+
+/* Highlighted Seating Card */
+.seating-card {
+  background: #ffffff;
+  border: 2px solid #bae6fd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+}
+
+.seating-card-header {
+  background: #f0f9ff;
+  border-bottom: 1px solid #bae6fd;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.seating-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--student-primary-dark);
+}
+
+.exam-status-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: #dcfce7;
+  color: #15803d;
+  padding: 3px 10px;
+  border-radius: 9999px;
+}
+
+/* Primary Visual Prominence Grid */
+.seating-prominence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  padding: 24px;
+  background: #f8fafc;
+  border-bottom: 1px solid var(--student-border);
+}
+
+.prominence-box {
+  background: #ffffff;
+  border: 1px solid var(--student-border);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.prominence-box.highlight {
+  border-color: #0284c7;
+  background: #f0f9ff;
+}
+
+.prominence-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--student-muted);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.prominence-value {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--student-primary-dark);
+  line-height: 1.2;
+}
+
+.prominence-box.highlight .prominence-value {
+  color: #0369a1;
+  font-size: 2rem;
+}
+
+/* Secondary Details Grid */
+.seating-details-grid {
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.75rem;
+  color: var(--student-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.detail-val {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--student-text);
+  margin-top: 2px;
+}
+
+/* Not Allocated State Card */
+.not-allocated-card {
+  background: #ffffff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 40px 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.not-allocated-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.not-allocated-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+.not-allocated-desc {
+  font-size: 0.9rem;
+  color: var(--student-muted);
+  max-width: 480px;
+  margin: 0 auto 16px auto;
+  line-height: 1.5;
+}
+
+/* Simple Hall Position Visualizer (Privacy Preserving) */
+.student-room-map {
+  background: #ffffff;
+  border: 1px solid var(--student-border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.room-map-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--student-text);
+}
+
+.room-map-banner {
+  background: #334155;
+  color: #ffffff;
+  text-align: center;
+  padding: 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.student-marker-box {
+  background: #eff6ff;
+  border: 2px solid #0284c7;
+  color: #0369a1;
+  border-radius: 6px;
+  padding: 12px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .student-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .welcome-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .welcome-meta {
+    text-align: left;
+    width: 100%;
+  }
+
+  .seating-prominence-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
